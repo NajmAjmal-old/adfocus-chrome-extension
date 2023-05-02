@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "My Head HTML Extension",
+  "version": "1.0",
+  "description": "This extension adds extra HTML code in the <head> of any website you visit.",
+  "permissions": ["declarativeContent"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
